@@ -46,26 +46,26 @@ Aqui não tem segredo, basta esperar o projeto iniciar.
 
 ![Passo 4](criar-projeto/passo4.png)
 
-<!-- ### Passo 5: Navegando até o Projeto
+### Etapa 5: " Projeto Criado "
 
-Acesse o diretório do seu projeto:
-
-```bash
-cd nome-do-seu-projeto
-```
+Você verá que no seu diretório alguns arquivos serão criados, isso significará que tudo deu certo.
 
 ![Passo 5](criar-projeto/passo5.png)
 
-### Passo 6: Iniciando o Servidor de Desenvolvimento
 
-Para iniciar o servidor, execute:
+### Etapa 6: " Abrindo seu Projeto (ou tentando) "
+
+Para iniciar o seu projeto, execute:
 
 ```bash
-expo start
+npx expo start --web
 ```
+
+Ele vai dar erro, mas relaxe! Isso é normal, falta uma dependência ainda.
 
 ![Passo 6](criar-projeto/passo6.png)
 
+<!--
 ### Passo 7: Abrindo no Navegador
 
 Após iniciar, uma página será aberta no seu navegador com opções para visualizar o seu projeto.
