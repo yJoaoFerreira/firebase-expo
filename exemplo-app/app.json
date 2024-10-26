@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "exemplo-app",
-    "slug": "exemplo-app",
+    "slug": "tutorial",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,6 +22,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7bb6e28b-7d49-495c-98b9-b593254b4847"
+      }
+    },
+    "owner": "yjoaoferreira",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7bb6e28b-7d49-495c-98b9-b593254b4847"
     }
   }
 }
