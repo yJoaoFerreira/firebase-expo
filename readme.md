@@ -61,17 +61,23 @@ Para iniciar o seu projeto, execute:
 npx expo start --web
 ```
 
-Ele vai dar erro, mas relaxe! Isso é normal, falta uma dependência ainda.
+Um erro ocorrerá, mas relaxe! Isso é normal, falta uma dependência ainda.
 
 ![Passo 6](criar-projeto/passo6.png)
 
-<!--
-### Passo 7: Abrindo no Navegador
+### Etapa 7: " Dependência Metro-Runtime "
 
-Após iniciar, uma página será aberta no seu navegador com opções para visualizar o seu projeto.
+Você irá perceber que o terminal irá exibir um comando junto do erro, copie-o.
+
+```bash
+npx expo install react-native-web react-dom @expo/metro-runtime
+```
+
+Execute o comando dado no terminal.
 
 ![Passo 7](criar-projeto/passo7.png)
 
+<!--
 ### Passo 8: Conectando seu Dispositivo
 
 Para testar em um dispositivo móvel, escaneie o código QR exibido no navegador com o aplicativo Expo Go.
