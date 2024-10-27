@@ -2,4 +2,5 @@
 - npm install react-native-screens react-native-safe-area-context
 - npm install @react-navigation/stack @react-navigation/bottom-tabs @react-navigation/drawer
 - npm install firebase
+- npm install @react-native-firebase/firestore
 - npm install --global eas-cli

@@ -4,8 +4,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { auth } from './firebaseConfig';
+import { auth, db } from './firebaseConfig';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from 'firebase/auth';
+import { setDoc, doc } from 'firebase/firestore';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -86,8 +87,17 @@ const Registrar = ({ navigation }) => {
   const handleRegister = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        Alert.alert(`Usuário registrado com sucesso! ID: ${userCredential.user.uid}`);
-        navigation.navigate('Login');
+        const userId = userCredential.user.uid;
+
+        // Armazena o email no Firestore
+        setDoc(doc(db, "users", userId), { email })
+          .then(() => {
+            Alert.alert(`Usuário registrado com sucesso! ID: ${userId}`);
+            navigation.navigate('Login');
+          })
+          .catch((error) => {
+            Alert.alert('Erro ao salvar dados no Firestore', error.message);
+          });
       })
       .catch((error) => {
         const errorMessage = error.message;
