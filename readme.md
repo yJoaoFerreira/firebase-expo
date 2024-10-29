@@ -77,40 +77,44 @@ Execute o comando dado no terminal.
 
 ![Passo 7](criar-projeto/passo7.png)
 
-<!--
-### Passo 8: Conectando seu Dispositivo
 
-Para testar em um dispositivo móvel, escaneie o código QR exibido no navegador com o aplicativo Expo Go.
+### Etapa 8: " Terminando a Instalação "
+
+Agora seu projeto já está pronto para ser iniciado! para isso, use o comando abaixo:
+
+```bash
+npx expo start --web
+```
 
 ![Passo 8](criar-projeto/passo8.png)
 
-### Passo 9: Editando o Código
+### Etapa 9: " Iniciando o App "
 
-Abra o arquivo `App.js` no seu editor de código para começar a fazer alterações.
+Após usar o comando no terminal, seu projeto começará a carregar.
 
 ![Passo 9](criar-projeto/passo9.png)
 
-### Passo 10: Salvando as Alterações
 
-As alterações que você fizer no código serão refletidas automaticamente no aplicativo em execução.
+### Etapa 10: " Quase Pronto "
+
+Você verá um QRCode na tela, ele serve para caso você queira ver pelo celular, mas é necessário estar na **mesma rede** que o seu celular. Além disso, é necessário baixar o App **Expo Go** na playstore para ler o QRCode.
 
 ![Passo 10](criar-projeto/passo10.png)
 
-### Passo 11: Adicionando Dependências
+### Etapa 11: " Sucesso "
 
-Para adicionar pacotes ao seu projeto, utilize o seguinte comando:
-
-```bash
-npm install nome-do-pacote
-```
+Caso você veja uma mensagem verde igual essa sublinhada, significa que seu App foi inicializado sem erros e abriu no seu navegador para visualização.
 
 ![Passo 11](criar-projeto/passo11.png)
 
-### Passo 12: Executando o Projeto em um Emulador
 
-Você pode executar seu projeto em um emulador Android ou iOS. Certifique-se de ter um emulador configurado.
+### Etapa 12: " Navegador Aberto "
+
+Você pode visualizar que seu aplicativo está aberto e sendo hosteado localmente no seu navegador, se você alterar alguma coisa no projeto e recarregar a guia, o app irá atualizar.
 
 ![Passo 12](criar-projeto/passo12.png)
+
+<!--
 
 ### Passo 13: Debugging
 
