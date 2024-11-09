@@ -1,86 +1,81 @@
-# Usando o Expo Localmente
+# Configuração Local do Expo
 
-Este guia tem o objetivo de te ensinar a usar o Expo no seu computador localmente, sem a necessidade de plataformas online como o **Snack.Expo**. Para isso, você precisará do **Node.js** e de um editor de código.
-
-Decidi fazer este pequeno guia para que você não passe pela mesma dor de cabeça e frustração que passei ao iniciar meus projetos mobile usando react-native no expo.
+Este guia orienta você na configuração do Expo no seu computador, permitindo desenvolver aplicativos React Native localmente, sem depender de plataformas online como o **Snack.Expo**. Este guia foi criado para simplificar a experiência de início de projetos mobile usando React Native com Expo, evitando algumas das dificuldades comuns para iniciantes.
 
 ## Requisitos
 
-- **Node.js**: Versão 20 ou superior
-- **Editor de código**: Qualquer editor de sua preferência (recomendo o [VSCode](https://code.visualstudio.com/))
+- **Node.js**: Versão 20 ou superior. [Baixe aqui](https://nodejs.org/)
+- **Editor de código**: Escolha o editor que preferir (recomendamos o [VSCode](https://code.visualstudio.com/))
 
+## Passo a Passo da Configuração
 
-## Etapas para Configuração
+### Passo 1: Preparando o Editor de Código
 
-### Etapa 1: " Editor de Código "
-
-Abra seu editor de código no diretório que deseja utilizar para o projeto. Não é necessário um editor específico para que este guia funcione, estarei fazendo no VSCode apenas por uma questão de conforto pessoal.
+Abra o editor de código no diretório onde deseja criar seu projeto. Neste guia, utilizamos o VSCode, mas qualquer editor é compatível.
 
 ![Passo 1](criar-projeto/passo1.png)
 
-### Etapa 2: " Iniciando o Projeto "
+### Passo 2: Iniciando um Novo Projeto Expo
 
-Execute o seguinte comando no terminal:
+No terminal do seu editor de código, execute o comando:
 
 ```bash
 npx create-expo-app . --template
 ```
 
-Isso deve retornar os templates do expo.
+Este comando irá buscar os templates do Expo.
 
 ![Passo 2](criar-projeto/passo2.png)
 
-### Etapa 3: " Escolhendo o Template "
+### Passo 3: Selecionando o Template
 
-No terminal, selecione:
+Quando solicitado no terminal, escolha a opção:
 
 ```bash
 > Blank - a minimal app as clean as an empty canvas
 ```
 
+Essa escolha cria um projeto básico.
+
 ![Passo 3](criar-projeto/passo3.png)
 
-### Etapa 4: " Esperando a Instalação "
+### Passo 4: Instalando o Projeto
 
-Aqui não tem segredo, basta esperar o projeto iniciar.
+Aguarde enquanto o Expo cria e configura seu projeto automaticamente.
 
 ![Passo 4](criar-projeto/passo4.png)
 
-### Etapa 5: " Projeto Criado "
+### Passo 5: Verificando a Criação do Projeto
 
-Você verá que no seu diretório alguns arquivos serão criados, isso significará que tudo deu certo.
+Após a instalação, verifique que novos arquivos foram gerados no seu diretório de projeto. Isso indica que a criação foi bem-sucedida.
 
 ![Passo 5](criar-projeto/passo5.png)
 
+### Passo 6: Inicializando o Projeto
 
-### Etapa 6: " Abrindo seu Projeto (ou tentando) "
-
-Para iniciar o seu projeto, execute:
+Para iniciar o projeto, use:
 
 ```bash
 npx expo start --web
 ```
 
-Um erro ocorrerá, mas relaxe! Isso é normal, falta uma dependência ainda.
+Se aparecer um erro, não se preocupe. Falta instalar uma dependência.
 
 ![Passo 6](criar-projeto/passo6.png)
 
-### Etapa 7: " Dependência Metro-Runtime "
+### Passo 7: Instalando Dependências Faltantes
 
-Você irá perceber que o terminal irá exibir um comando junto do erro, copie-o.
+O terminal exibirá um comando para instalar as dependências ausentes. Copie e execute-o:
 
 ```bash
 npx expo install react-native-web react-dom @expo/metro-runtime
 ```
 
-Execute o comando dado no terminal.
-
 ![Passo 7](criar-projeto/passo7.png)
 
+### Passo 8: Reiniciando o Projeto
 
-### Etapa 8: " Terminando a Instalação "
-
-Agora seu projeto já está pronto para ser iniciado! para isso, use o comando abaixo:
+Após instalar as dependências, reinicie o projeto com:
 
 ```bash
 npx expo start --web
@@ -88,56 +83,60 @@ npx expo start --web
 
 ![Passo 8](criar-projeto/passo8.png)
 
-### Etapa 9: " Iniciando o App "
+### Passo 9: Carregando o Projeto
 
-Após usar o comando no terminal, seu projeto começará a carregar.
+O projeto agora começará a ser carregado. Aguarde até ver a interface do Expo.
 
 ![Passo 9](criar-projeto/passo9.png)
 
+### Passo 10: Explorando no Celular
 
-### Etapa 10: " Quase Pronto "
-
-Você verá um QRCode na tela, ele serve para caso você queira ver pelo celular, mas é necessário estar na **mesma rede** que o seu celular. Além disso, é necessário baixar o App **Expo Go** na playstore para ler o QRCode.
+Um QR code será exibido na tela. Para visualizar o app no celular, escaneie o código com o **Expo Go** (disponível na Play Store), estando na mesma rede que seu celular.
 
 ![Passo 10](criar-projeto/passo10.png)
 
-### Etapa 11: " Sucesso "
+### Passo 11: Confirmação de Sucesso
 
-Caso você veja uma mensagem verde igual essa sublinhada, significa que seu App foi inicializado sem erros e abriu no seu navegador para visualização.
+Se uma mensagem verde aparecer, seu app foi iniciado com sucesso e está disponível no navegador.
 
 ![Passo 11](criar-projeto/passo11.png)
 
+### Passo 12: Visualizando no Navegador
 
-### Etapa 12: " Navegador Aberto "
-
-Você pode visualizar que seu aplicativo está aberto e sendo hosteado localmente no seu navegador, se você alterar alguma coisa no projeto e recarregar a guia, o app irá atualizar.
+Agora, seu app está disponível localmente no navegador. Qualquer alteração será automaticamente refletida ao recarregar a página.
 
 ![Passo 12](criar-projeto/passo12.png)
 
-<!--
+### Passos 13 a 15: Ajuste para Formato Mobile no Navegador
 
-### Passo 13: Debugging
+Para uma visualização no formato mobile:
 
-Utilize as ferramentas de desenvolvimento do seu navegador para inspecionar e debugar seu aplicativo.
+1. Clique com o botão direito no navegador e selecione "Inspecionar elemento".
+2. Ative o modo de visualização para dispositivos móveis clicando no ícone específico.
+3. Agora, seu app estará visível no formato de um celular.
 
 ![Passo 13](criar-projeto/passo13.png)
-
-### Passo 14: Parando o Servidor
-
-Para parar o servidor de desenvolvimento, pressione `Ctrl + C` no terminal.
-
 ![Passo 14](criar-projeto/passo14.png)
+![Passo 15](criar-projeto/passo15.png)
 
-### Passo 15: Publicando o Aplicativo
+### Passo 16: Instalando Dependências no Projeto
 
-Quando estiver pronto para publicar, use:
+Para instalar dependências no seu projeto, use:
 
 ```bash
-expo publish
+npm install <dependência>
 ```
 
-![Passo 15](criar-projeto/passo15.png)
+Se ocorrerem erros de compatibilidade, você pode forçar a instalação ignorando conflitos de versões com o comando:
+
+```bash
+npm install <dependência> --legacy-peer-deps
+```
+
+Esse método é recomendado apenas se a biblioteca for essencial.
+
+![Passo 16](criar-projeto/passo16.png)
 
 ## Conclusão
 
-Parabéns! Agora você configurou o Expo no seu computador e pode começar a desenvolver seus aplicativos móveis localmente. Se você tiver alguma dúvida ou encontrar problemas, sinta-se à vontade para abrir uma issue neste repositório ou entrar em contato comigo em alguma rede social, ficarei feliz em ajudar ^^ -->
+Parabéns! Agora você configurou o Expo localmente e está pronto para desenvolver aplicativos móveis no seu ambiente. Em caso de dúvidas ou problemas, sinta-se à vontade para abrir uma issue neste repositório ou entre em contato comigo em redes sociais. Boa sorte e bom desenvolvimento!
